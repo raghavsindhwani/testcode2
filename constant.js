@@ -1,4 +1,4 @@
-const HOST_PATH = '/home/raghavsindhwani/Desktop/clean_code_2_2/clean-test-master'
+const HOST_PATH = '/home/raghavsindhwani/Desktop/clean_code_2_2/given-data'
 
 const constants = {
     PATHS: {
