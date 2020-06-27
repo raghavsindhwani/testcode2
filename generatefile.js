@@ -1,9 +1,9 @@
 const ExcelGenerator = () => {
 
     const readXlsxFile = require('read-excel-file/node');
-    const wrightXlsxFile = require('excel4node');
+    const wrightXlsxFile = require('excel4node');           //read wright libraries
     const Readjson = require('fs');
-    const constants = require('./constant')
+    const constants = require('./constant')  //location for host path
 
     let DataMap = Readjson.readFileSync(constants.constants.PATHS.MAPPING_FILE);
     DataMap = JSON.parse(DataMap);
@@ -30,7 +30,7 @@ const ExcelGenerator = () => {
                 }
         
                 for(let j = 0; j < rows[i].length; j++) {
-        
+                        // to covert B1 to b 1 to 2 1 and get exact cell number
                     var cellNumber = DataMap[rows[0][j].toLowerCase()].replace(/\'/g, '').split(/(\d+)/).filter(Boolean)
                     var columnNumber = cellNumber[0]
                     var rowNumber = cellNumber[1]
